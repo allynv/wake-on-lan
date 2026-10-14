@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">@color/surface</item>
+        <item name="android:colorPrimaryDark">@color/bg</item>
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:colorControlNormal">@color/text_secondary</item>
+        <item name="android:colorControlActivated">@color/primary</item>
+        <item name="android:colorControlHighlight">#3322C55E</item>
+        <item name="android:popupBackground">@color/surface_alt</item>
+        <item name="android:alertDialogTheme">@style/AppDialog</item>
+    </style>
+
+    <style name="AppDialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="android:windowBackground">@color/surface_alt</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:popupBackground">@color/surface_alt</item>
+    </style>
+
+    <style name="Card">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">@dimen/card_padding</item>
+    </style>
+
+    <style name="Label">
+        <!-- 布局参数一并写进样式：漏写会导致运行时崩溃（You must supply a layout_width attribute） -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">@dimen/text_label</item>
+    </style>
+
+    <style name="Input">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonPrimary">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">#FF07230F</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+    </style>
+
+    <style name="ButtonGhost">
+        <item name="android:background">@drawable/bg_button_ghost</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+    </style>
+</resources>

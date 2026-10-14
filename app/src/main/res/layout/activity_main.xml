@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="6dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_subtitle"
+                android:textColor="@color/text_hint"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:text="@string/action_settings"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/action_add"
+            android:src="@drawable/ic_add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusCard"
+        style="@style/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:layout_marginRight="@dimen/page_padding"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/statusWifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status_wifi_unknown"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/statusIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/status_no_ip"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/statusBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/deviceList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/empty_hint"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/statusFeishu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="10dp"
+        android:text="@string/hint_mac_help"
+        android:textColor="@color/text_hint"
+        android:textSize="11sp" />
+</LinearLayout>

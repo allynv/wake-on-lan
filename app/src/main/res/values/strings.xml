@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">局域网唤醒</string>
+
+    <string name="header_subtitle">Wake-on-LAN</string>
+    <string name="action_add">添加设备</string>
+    <string name="action_settings">设置</string>
+
+    <string name="status_wifi_connected">Wi-Fi 已连接（%1$s）</string>
+    <string name="status_wifi_unknown">Wi-Fi: 未知</string>
+    <string name="status_no_wifi">未连接 Wi-Fi，无法发送唤醒包</string>
+    <string name="status_local_ip">本机 IP: %1$s/%2$d</string>
+    <string name="status_broadcast">广播: %1$s</string>
+    <string name="status_no_ip">未获取到 IPv4 地址</string>
+
+    <string name="empty_hint">还没有设备\n点右上角 + 添加一台电脑的网卡 MAC</string>
+
+    <string name="menu_edit">编辑</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_copy_mac">复制 MAC</string>
+    <string name="menu_title">%1$s</string>
+
+    <string name="delete_confirm_title">删除设备</string>
+    <string name="delete_confirm_msg">确定删除「%1$s」吗？</string>
+    <string name="copied">已复制 %1$s</string>
+
+    <string name="sending">正在发送唤醒包…</string>
+    <string name="wake_failed">发送失败：%1$s</string>
+    <string name="wake_done">已发送 %1$d 个魔术包 → %2$s</string>
+    <string name="wake_arp_fallback">%1$s 解析不到 ARP，单播包发不出去，已改用广播 %2$s</string>
+
+    <string name="edit_title_new">添加设备</string>
+    <string name="edit_title_edit">编辑设备</string>
+    <string name="field_name">名称</string>
+    <string name="field_name_hint">例如：书房台式机</string>
+    <string name="field_mac">网卡 MAC 地址</string>
+    <string name="field_mac_hint">AA:BB:CC:DD:EE:FF</string>
+    <string name="field_ip">IPv4 地址（可选）</string>
+    <string name="field_ip_hint">192.168.1.100；留空则只发广播唤醒</string>
+    <string name="field_port">唤醒端口</string>
+    <string name="field_note">备注（可选）</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+
+    <string name="err_name_empty">请填写名称</string>
+    <string name="err_mac_invalid">MAC 格式不正确，应为 6 组十六进制，例如 AA:BB:CC:DD:EE:FF</string>
+    <string name="err_ip_invalid">IPv4 地址格式不正确</string>
+    <string name="err_port_invalid">端口需为 1 - 65535 的整数</string>
+    <string name="saved">已保存</string>
+
+    <string name="settings_title">设置</string>
+    <string name="settings_port">默认唤醒端口</string>
+    <string name="settings_repeat">每个目标发送次数（唤醒不成功可调到 3~5）</string>
+    <string name="settings_port7">同时向端口 7 发送</string>
+    <string name="settings_saved">设置已保存</string>
+
+    <string name="hint_mac_help">MAC 可在电脑上执行 ipconfig /all（物理地址）查看</string>
+
+    <!-- 飞书远程唤醒 -->
+    <string name="feishu_entry">飞书远程唤醒…</string>
+    <string name="feishu_title">飞书远程唤醒</string>
+    <string name="feishu_intro">在飞书开放平台创建「企业自建应用」，按下面三步配置；之后在任何地方给机器人发 /wake 设备名，本机就会发出唤醒包。\n\n① 应用能力 → 添加「机器人」\n② 权限管理 → 开通：im:message:readonly、im:message:send_as_bot、contact:user.id:readonly\n③ 创建版本并发布；可用范围只勾你自己（这样只有你能给机器人发消息）\n\n然后在下面填 App ID / App Secret / 手机号，点「连接并获取会话」——机器人会主动给你发一条消息，之后直接在飞书里回复指令即可。\n\n注意：本机必须连在家里内网 Wi-Fi 上，才真的能发出唤醒包。</string>
+    <string name="feishu_enable">启用（后台常驻轮询飞书指令）</string>
+    <string name="feishu_app_id">App ID</string>
+    <string name="feishu_app_id_hint">cli_ 开头</string>
+    <string name="feishu_app_secret">App Secret</string>
+    <string name="feishu_app_secret_hint">仅保存在本机，不会上传</string>
+    <string name="feishu_mobile">我的手机号（仅用于首次获取会话）</string>
+    <string name="feishu_mobile_hint">13800000000</string>
+    <string name="feishu_connect">连接并获取会话</string>
+    <string name="feishu_chat_id">单聊 chat_id：%1$s</string>
+    <string name="feishu_open_id">我的 open_id：%1$s</string>
+    <string name="feishu_status">运行状态：%1$s</string>
+    <string name="feishu_poll_seconds">轮询间隔（秒，5 ~ 120）</string>
+    <string name="feishu_allowed">允许触发的 open_id（留空 = 仅靠飞书可用范围限制）</string>
+    <string name="feishu_allowed_hint">多个用逗号分隔</string>
+    <string name="feishu_keep_awake">保持唤醒（息屏后仍按间隔轮询，略耗电；常插电设备建议开）</string>
+    <string name="feishu_test">发送测试消息</string>
+    <string name="feishu_battery_button">后台常驻设置说明</string>
+    <string name="feishu_footer">排查：在飞书开放平台改过权限后，必须「创建版本并发布」才会生效；若提示应用未启用，请先在飞书工作台里启用一次该应用。指令与执行结果都在与机器人的单聊里，不进任何群。</string>
+    <string name="feishu_saved">已保存</string>
+    <string name="feishu_connecting">正在连接飞书…</string>
+    <string name="feishu_need_config">请先填写 App ID、App Secret 和手机号</string>
+    <string name="feishu_connect_ok">连接成功！chat_id 已获取。现在打开飞书里与机器人的单聊，发送 /wake 设备名 即可。</string>
+    <string name="feishu_error">操作失败：%1$s</string>
+    <string name="feishu_test_sent">测试消息已发送，请在飞书里查看</string>
+    <string name="feishu_need_chat">请先点「连接并获取会话」</string>
+    <string name="feishu_battery_title">后台常驻设置</string>
+    <string name="feishu_battery_msg">为保证息屏后仍能按间隔轮询：\n\n1. 系统设置 → 应用设置 → 应用管理 → 局域网唤醒 → 省电策略 → 无限制\n2. 允许「自启动」\n3. 在最近任务里下拉锁定本应用\n\n未配置时服务可能被系统清理，指令会延迟很久才响应。</string>
+    <string name="feishu_battery_open">打开系统设置</string>
+    <string name="feishu_battery_later">稍后</string>
+    <string name="feishu_mode_off">未启用</string>
+    <string name="feishu_mode_on">已启用 · 上次检查 %1$s · 上次唤醒 %2$s</string>
+    <string name="feishu_mode_err">已启用 · 最近错误：%1$s</string>
+</resources>
