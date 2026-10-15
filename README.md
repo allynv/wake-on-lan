@@ -29,7 +29,8 @@
 
 ## 安装
 
-1. **取得安装包**：仓库不存放 APK —— 可按 [BUILD.md](BUILD.md) 自行构建（Windows 上一条命令），或使用他人分享给你的 APK。
+1. **下载安装包**：到 [Releases 页面](https://github.com/allynv/wake-on-lan/releases/latest) 下载 `WolWake-1.0.0.apk`
+   （想自己编译见 [BUILD.md](BUILD.md)）。
 2. **传到手机**：微信文件传输 / 数据线 / 局域网均可。
 3. **点击安装**：用「文件管理」打开 APK 安装。
 4. **如果被系统拦截**：
